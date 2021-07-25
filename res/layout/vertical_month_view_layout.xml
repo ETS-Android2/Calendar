@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.calendar.kr.vertical.VerticalMonthViewContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/vertical_calendar_padding_bottom"
+    android:orientation="horizontal">
+
+    <!-- Week bar -->
+    <com.android.calendar.kr.vertical.VerticalWeekBar
+        android:id="@+id/week_view"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:elevation="100dp" />
+
+    <!-- Month view -->
+    <com.android.calendar.kr.vertical.VerticalMonthView
+        android:id="@+id/month_view"
+        android:layout_width="200dp"
+        android:layout_height="match_parent" />
+
+</com.android.calendar.kr.vertical.VerticalMonthViewContainer>

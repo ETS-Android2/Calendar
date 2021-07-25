@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.calendar.kr.day.DayFragmentContainerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/bottom_bar_height"
+    android:orientation="vertical"
+    tools:context="com.android.calendar.kr.day.DayViewFragment">
+
+    <ImageView
+        android:id="@+id/bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_march"
+        android:contentDescription="TODO" />
+
+    <LinearLayout
+        android:id="@+id/go_to_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/bg_image"
+        android:layout_alignBottom="@id/bg_image"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="invisible">
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_left_arrow"
+            app:tint="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="@string/go_to_today"/>
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_right_arrow"
+            app:tint="#ffffff" />
+    </LinearLayout>
+
+    <com.android.calendar.customize.NestedScrollableHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bg_image">
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/day_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.android.calendar.customize.NestedScrollableHost>
+
+</com.android.calendar.kr.day.DayFragmentContainerView>

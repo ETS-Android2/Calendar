@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 양식 1 -->
+<com.android.calendar.kr.standard.MonthFragmentStandardContainerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/bottom_bar_height"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:ignore="RtlHardcoded,HardcodedText,RtlSymmetry,SmallSp">
+
+    <com.android.calendar.kr.standard.StandardCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:min_year="?attr/min_year"
+        app:max_year="?attr/max_year"
+        app:calendar_padding="10dp"
+        app:other_month_text_color="#e1e1e1"
+        app:selected_text_color="#fff"
+        app:today_fill_color="@color/todayFillColor"
+        app:week_text_color="#716B6B"
+        app:month_background_height_percent="46"
+        >
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/month_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+    </com.android.calendar.kr.standard.StandardCalendarView>
+
+</com.android.calendar.kr.standard.MonthFragmentStandardContainerView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 일정목록화면이 보여지는 animation -->
+<!-- 일정목록화면에 해당된다 -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:interpolator="@android:interpolator/linear"
+        android:valueFrom="1"
+        android:valueTo="0"
+        android:propertyName="slideX"
+        android:duration="@integer/month_year_transition_duration" />
+</set>

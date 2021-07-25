@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.calendar.kr.general.GeneralDayViewContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:paddingTop="5dp"
+    android:orientation="vertical">
+
+    <!-- No event view -->
+    <TextView
+        android:id="@+id/no_event_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/round_event_background"
+        android:gravity="center_vertical"
+        android:textColor="?attr/common_text_color_main"
+        android:textSize="16sp"
+        android:text="@string/no_event_label"/>
+
+    <!-- Event list -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/bottom_bar_height"
+        android:clipToPadding="false"
+        android:clipChildren="false">
+        <!-- Event list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/event_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+    </RelativeLayout>
+
+</com.android.calendar.kr.general.GeneralDayViewContainer>

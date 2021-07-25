@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* //device/apps/Calendar/assets/res/any/colors.xml
+**
+** Copyright 2006, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources>
+    <color name="colorDarkerGrey">#aaa</color>
+    <color name="colorPrimary">#0C9A86</color>
+    <color name="colorPrimaryDark">@color/commonBackgroundColor</color>
+    <color name="colorAccent">#1dc1ab</color>
+    <color name="colorBluePrimary">#4b7bea</color>
+    <color name="colorBlueAccent">#3564d4</color>
+    <color name="colorGreenPrimaryDark">#30a320</color>
+    <color name="colorRedPrimary">#c72c14</color>
+    <color name="colorRedPrimaryDark">#9c2513</color>
+    <color name="colorRedAccent">#d1270c</color>
+    <color name="colorPurplePrimaryDark">#862297</color>
+    <color name="colorPurpleAccent">#9c10b4</color>
+    <color name="colorPastEvent">#5a5a5a</color>
+    <color name="colorFutureEvent">#365db7</color>
+
+    <color name="calendar_owner_text_color">#777777</color>
+
+    <color name="edit_event_small">#000000</color>
+
+    <!-- Event info colors -->
+    <color name="event_info_organizer_color">#FF666666</color>
+    <color name="event_info_description_color">#FF666666</color>
+    <color name="event_info_body_color">#FF666666</color>
+    <color name="event_info_label_color">#FF999999</color>
+
+    <!-- Create event colors -->
+    <color name="create_event_date_color">#FF000000</color>
+
+    <color name="alert_event_title">#FFFFFFFF</color>
+    <color name="alert_event_other">#FF999999</color>
+    <color name="alert_past_event">#8F999999</color>
+
+    <color name="recurrence_selected_color">@color/common_selected_color</color>
+    <color name="recurrence_weekend_color">#ff3b30</color>
+
+    <!-- Dark Color SimpleWeekView -->
+    <color name="bg_dark">#000000</color>
+    <color name="fg_dark_primary">#deffffff</color>
+    <color name="fg_dark_secondary">#99ffffff</color>
+
+    <!-- Dark Color EditEvent -->
+    <color name="edit_event_small_dark">#f5f5f5</color>
+
+    <!-- default calendar/event color palette -->
+    <array name="defaultCalendarColors">
+        <item>#FFD1270C</item>
+        <item>#FF11AB64</item>
+        <item>#FF1454B9</item>
+        <item>#FF4EA719</item>
+        <item>#FF62B492</item>
+        <item>#FF6365CC</item>
+        <item>#FF6E96B9</item>
+        <item>#FF6EB3B9</item>
+        <item>#FF7449B5</item>
+        <item>#FF8363CC</item>
+        <item>#FF85B03C</item>
+        <item>#FF8A4D38</item>
+        <item>#FF9B9B9B</item>
+        <item>#FF9E41B8</item>
+        <item>#FFA29496</item>
+        <item>#FFA37C82</item>
+        <item>#FFA63D36</item>
+        <item>#FFC55C7E</item>
+        <item>#FFC61600</item>
+        <item>#FFC81E02</item>
+        <item>#FFC89D2D</item>
+        <item>#FFC9B64C</item>
+        <item>#FFCC3F00</item>
+        <item>#FFCC770C</item>
+    </array>
+
+    <!-- Month Color -->
+    <color name="common_selected_color">#0a84ff</color>
+    <color name="menuItemBackgroundColor">#ffffff</color>
+    <color name="commonBackgroundColor">#ffffff</color>
+    <color name="commonTextColor">#121212</color>
+    <color name="commonIconColor">#636363</color>
+    <color name="commonOutlineColor">#343434</color>
+    <color name="commonLineColor">#565656</color>
+    <color name="todayFillColor">#E86B3B</color>
+    <color name="commonLightTextColor">#C0C0C0</color>
+    <color name="week_bar_weekend_text_color">#fff5174f</color>
+
+    <!-- Event Edit Color -->
+    <color name="edit_event_label_color">#9F000000</color>
+    <color name="event_add_reminder_color">@android:color/holo_blue_light</color>
+
+    <!-- Event Type Colors -->
+    <color name="event_type_default_color">@color/colorRedPrimary</color>
+    <color name="event_type_birthday_color">@color/colorPurpleAccent</color>
+    <color name="event_type_conference_color">@color/colorPurplePrimaryDark</color>
+    <color name="event_type_holiday_color">@color/colorRedAccent</color>
+    <color name="event_type_competition_color">@color/colorBlueAccent</color>
+    <color name="event_type_travel_color">@color/colorBluePrimary</color>
+    <color name="event_type_cure_color">@color/colorGreenPrimaryDark</color>
+    <color name="event_type_examination_color">@color/colorRedPrimaryDark</color>
+
+    <!-- Selected calendar type color -->
+    <color name="selected_calendar_text_color">@color/common_selected_color</color>
+    <color name="selected_calendar_outline_color">@color/common_selected_color</color>
+    <color name="unselected_calendar_text_color">#c3c3c3</color>
+    <color name="unselected_calendar_outline_color">@color/commonOutlineColor</color>
+
+    <!-- Agenda item text highlight color -->
+    <color name="search_keyword_highlight_color">#26A3D5</color>
+    <color name="today_item_time_color">#0269A4</color>
+
+    <!-- Widget text color -->
+    <color name="weekend_text_color">#E3f5174f</color>
+
+    <!-- Recurrence Events Delete dialog color -->
+    <color name="radio_button_selected_color">@color/common_selected_color</color>
+
+    <!-- Year's month view background outline color -->
+    <color name="year_view_out_line_color">#0076DD</color>
+
+    <!-- Notification small icon color -->
+    <color name="small_icon_color">@color/common_selected_color</color>
+</resources>

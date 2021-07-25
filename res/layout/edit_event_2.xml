@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 The Android Open Source Project
+     Copyright (c) 2013, The Linux Foundation. All Rights Reserved.
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/common_background_color">
+
+    <!-- REMINDERS -->
+    <LinearLayout
+        android:id="@+id/reminders_row"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <TextView
+            android:layout_width="@dimen/event_item_title_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="?attr/common_text_color_main"
+            android:text="@string/hint_reminder"
+            android:textSize="@dimen/edit_event_label_text_size"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/reminder_items_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+            <Button
+                android:id="@+id/reminder_add"
+                android:text="@string/reminders_label"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="@color/event_add_reminder_color"
+                android:textAlignment="center"
+                style="?android:attr/borderlessButtonStyle"
+                android:contentDescription="@string/accessibility_add_reminder" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- CALENDARS SELECTOR for new events -->
+    <LinearLayout
+        android:id="@+id/calendar_selector_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="-50dp"
+        android:focusable="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/event_account"
+            android:backgroundTint="?attr/common_text_color_main"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="Account"/>
+        <TextView
+            android:text="@string/account_label"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="0dip"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/edit_event_label_color"
+            style="@style/TextAppearance.EditEvent_LabelSmall" />
+        <Spinner
+            android:id="@+id/calendars_spinner"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:prompt="@string/edit_event_calendar_label" />
+    </LinearLayout>
+
+    <!-- CALENDAR DISPLAY for existing events -->
+    <LinearLayout
+        android:id="@+id/calendar_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/event_account"
+            android:backgroundTint="?attr/common_text_color_main"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="Account" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/calendar_textview"
+                style="@style/TextAppearance.EditEvent_Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dip"
+                android:layout_marginEnd="24dip"
+                android:textColor="?attr/common_text_color_main" />
+            <TextView
+                android:id="@+id/calendar_textview_secondary"
+                style="@style/TextAppearance.EditEvent_Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dip"
+                android:layout_marginEnd="24dip"
+                android:textColor="?attr/common_text_color_main"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

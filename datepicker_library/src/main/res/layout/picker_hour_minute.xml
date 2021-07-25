@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal">
+
+
+    <!-- hour -->
+    <com.lany.numberpicker.NumberPicker
+        android:id="@+id/hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:focusable="true"
+        app:selectionTextColor="?attr/common_text_color_main"
+        app:internalMinWidth="80dp"
+        app:selectionTextSize="18sp"
+        android:focusableInTouchMode="true" />
+
+    <!-- divider -->
+
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:importantForAccessibility="no" />
+
+    <!-- minute -->
+
+    <com.lany.numberpicker.NumberPicker
+        android:id="@+id/minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:focusable="true"
+        app:selectionTextColor="?attr/common_text_color_main"
+        app:internalMinWidth="80dp"
+        app:selectionTextSize="18sp"
+        android:focusableInTouchMode="true" />
+
+    <!-- AM / PM -->
+    <com.lany.numberpicker.NumberPicker
+        android:id="@+id/amPm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:focusable="true"
+        app:selectionTextColor="?attr/common_text_color_main"
+        app:internalMinWidth="80dp"
+        app:selectionTextSize="18sp"
+        android:focusableInTouchMode="true" />
+
+</LinearLayout>

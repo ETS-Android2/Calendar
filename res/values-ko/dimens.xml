@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="date_label_size">15sp</dimen>
+    <dimen name="font_size_small">18sp</dimen>
+    <dimen name="font_size_medium">20sp</dimen>
+    <dimen name="font_size_big">22sp</dimen>
+    <dimen name="event_info_item_title_text_size">18sp</dimen>
+    <dimen name="event_info_item_title_width">40dp</dimen>
+    <dimen name="forward_label_width">60dp</dimen>
+    <dimen name="event_type_label_text_size">15.5sp</dimen>
+    <dimen name="year_view_month_text_size">22sp</dimen>
+    <dimen name="year_view_today_text_size">16sp</dimen>
+    <dimen name="year_view_event_text_size">18sp</dimen>
+    <dimen name="vertical_week_day_view_width">60dp</dimen>
+    <dimen name="reminder_spinner_width">60dp</dimen>
+    <dimen name="big_calendar_weekday_text_size">14sp</dimen>
+    <dimen name="big_calendar_event_text_size">16sp</dimen>
+    <dimen name="reminder_spinner_text_size_for_edit">14sp</dimen>
+    <dimen name="reminder_spinner_text_size_for_view">18sp</dimen>
+    <dimen name="year_view_header_padding">20dp</dimen>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Date picker divider color -->
+    <color name="date_picker_divider_color">#1083F6</color>
+
+    <color name="button_text_color">@color/date_picker_divider_color</color>
+
+    <color name="tab_indicator_focused_color">#3DB3E6</color>
+    <color name="tab_indicator_unfocused_color">#22ffffff</color>
+</resources>

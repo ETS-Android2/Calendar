@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+    <LinearLayout
+        android:id="@+id/year_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/year_round_rect_outline">
+
+        <!-- Month -->
+        <TextView
+            android:id="@+id/month_label"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="@dimen/year_view_month_text_size"
+            android:textColor="?attr/common_text_color_main"
+            android:text="@string/january_label"/>
+
+        <!-- Today -->
+        <TextView
+            android:id="@+id/today_label"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/year_view_today_text_size"
+            android:textColor="?attr/common_text_color_secondary"
+            android:text="1일 화요일"
+            android:visibility="invisible"/>
+
+        <!-- Event count -->
+        <TextView
+            android:id="@+id/event_count_label"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="@dimen/year_view_event_text_size"
+            android:textColor="?attr/common_text_color_tertiary" />
+
+    </LinearLayout>
+
+</LinearLayout>

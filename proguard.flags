@@ -1,0 +1,18 @@
+-keepclassmembers class com.android.calendar.activities.AllInOneActivity {
+  *** handleSelectSyncedCalendarsClicked(...);
+}
+-keepclassmembers class com.android.calendar.helper.AsyncQueryService {
+  *** setTestHandler(...);
+  *** getLastCancelableOperation(...);
+}
+-keepclassmembers class com.android.calendar.helper.AsyncQueryServiceHelper$OperationInfo {
+  *** equivalent(...);
+}
+-keepclassmembers class com.android.calendar.event.EditEventHelper {
+ *** updateRecurrenceRule(...);
+ *** extractDomain(...);
+}
+
+-keepclassmembers class * implements android.content.SharedPreferences$Editor {
+  public *** apply();
+}

@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="10dp"
+    android:background="?attr/common_background_color"
+    android:orientation="vertical">
+
+    <!-- Dialog title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="10dp">
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_left_arrow"
+            android:foreground="@drawable/circle_ripple"
+            android:clickable="true"
+            app:tint="#d3d3d3" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/repeats_label"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+    <!-- Main content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/recurrence_background"
+                android:orientation="vertical">
+
+                <!-- Recurrence types(radio group) -->
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/radio_no_repeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/label_no_repeat"
+                        android:textSize="@dimen/recurrence_picker_text_size"
+                        android:textColor="@color/radio_button_text_color"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/radio_every_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/label_every_day"
+                        android:textSize="@dimen/recurrence_picker_text_size"
+                        android:textColor="@color/radio_button_text_color"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/radio_every_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/label_every_week"
+                        android:textSize="@dimen/recurrence_picker_text_size"
+                        android:textColor="@color/radio_button_text_color"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/radio_every_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/label_every_month"
+                        android:textSize="@dimen/recurrence_picker_text_size"
+                        android:textColor="@color/radio_button_text_color"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/radio_every_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/label_every_year"
+                        android:textSize="@dimen/recurrence_picker_text_size"
+                        android:textColor="@color/radio_button_text_color"/>
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/radio_customize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/label_custom"
+                        android:textSize="@dimen/recurrence_picker_text_size"
+                        android:textColor="@color/radio_button_text_color"/>
+                </RadioGroup>
+
+                <com.android.calendar.expandablelayout.ExpandableLayout
+                    android:id="@+id/view_for_customize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="@integer/expand_animate_long_duration"
+                    app:el_expanded="true">
+
+                    <!-- View for customizing -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Recurrence type -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.lany.numberpicker.NumberPicker
+                                android:id="@+id/interval"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="75dp"
+                                android:focusable="true"
+                                app:selectionTextColor="@color/recurrence_selected_color"
+                                app:internalMinWidth="80dp"
+                                app:selectionTextSize="25sp"
+                                android:focusableInTouchMode="true" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="10dp" />
+
+                            <com.lany.numberpicker.NumberPicker
+                                android:id="@+id/recurrence_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="75dp"
+                                android:focusable="true"
+                                android:gravity="center_horizontal"
+                                app:selectionTextColor="@color/recurrence_selected_color"
+                                app:internalMinWidth="80dp"
+                                app:selectionTextSize="25sp"
+                                android:focusableInTouchMode="true" />
+                        </LinearLayout>
+
+                        <!-- Repeat settings (won't be shown on repeat daily, yearly) -->
+                        <com.android.calendar.expandablelayout.ExpandableLayout
+                            android:id="@+id/repeat_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:el_duration="@integer/expand_animate_short_duration"
+                            app:el_expanded="false">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/label_repeat_on"
+                                    android:textSize="18sp"
+                                    android:textColor="?attr/common_text_color_tertiary" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <!-- View for week -->
+                                    <LinearLayout
+                                        android:id="@+id/custom_repeat_weekly"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingStart="20dp"
+                                        android:paddingEnd="20dp"
+                                        android:paddingTop="20dp"
+                                        android:paddingBottom="20dp"
+                                        android:orientation="horizontal">
+
+                                        <!-- Sunday -->
+                                        <FrameLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+                                            <androidx.appcompat.widget.AppCompatToggleButton
+                                                android:id="@+id/week_sunday"
+                                                android:layout_width="@dimen/recurrence_weekday_size"
+                                                android:layout_height="@dimen/recurrence_weekday_size"
+                                                android:textOn="@string/sun"
+                                                android:textOff="@string/sun"
+                                                android:textSize="16sp"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:clickable="true"
+                                                android:textColor="@color/recurrence_weekend_color"
+                                                android:background="@drawable/weekday"/>
+                                        </FrameLayout>
+
+                                        <!-- Monday -->
+                                        <FrameLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+                                            <androidx.appcompat.widget.AppCompatToggleButton
+                                                android:id="@+id/week_monday"
+                                                android:layout_width="@dimen/recurrence_weekday_size"
+                                                android:layout_height="@dimen/recurrence_weekday_size"
+                                                android:textOn="@string/mon"
+                                                android:textOff="@string/mon"
+                                                android:textSize="16sp"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:clickable="true"
+                                                android:background="@drawable/weekday"/>
+                                        </FrameLayout>
+
+                                        <!-- Tuesday -->
+                                        <FrameLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+                                            <androidx.appcompat.widget.AppCompatToggleButton
+                                                android:id="@+id/week_tuesday"
+                                                android:layout_width="@dimen/recurrence_weekday_size"
+                                                android:layout_height="@dimen/recurrence_weekday_size"
+                                                android:textOn="@string/tue"
+                                                android:textOff="@string/tue"
+                                                android:textSize="16sp"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:clickable="true"
+                                                android:background="@drawable/weekday"/>
+                                        </FrameLayout>
+
+                                        <!-- Wednesday -->
+                                        <FrameLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+                                            <androidx.appcompat.widget.AppCompatToggleButton
+                                                android:id="@+id/week_wednesday"
+                                                android:layout_width="@dimen/recurrence_weekday_size"
+                                                android:layout_height="@dimen/recurrence_weekday_size"
+                                                android:textOn="@string/wed"
+                                                android:textOff="@string/wed"
+                                                android:textSize="16sp"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:clickable="true"
+                                                android:background="@drawable/weekday"/>
+                                        </FrameLayout>
+
+                                        <!-- Thursday -->
+                                        <FrameLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+                                            <androidx.appcompat.widget.AppCompatToggleButton
+                                                android:id="@+id/week_thursday"
+                                                android:layout_width="@dimen/recurrence_weekday_size"
+                                                android:layout_height="@dimen/recurrence_weekday_size"
+                                                android:textOn="@string/thu"
+                                                android:textOff="@string/thu"
+                                                android:textSize="16sp"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:clickable="true"
+                                                android:background="@drawable/weekday"/>
+                                        </FrameLayout>
+
+                                        <!-- Friday -->
+                                        <FrameLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+                                            <androidx.appcompat.widget.AppCompatToggleButton
+                                                android:id="@+id/week_friday"
+                                                android:layout_width="@dimen/recurrence_weekday_size"
+                                                android:layout_height="@dimen/recurrence_weekday_size"
+                                                android:textOn="@string/fri"
+                                                android:textOff="@string/fri"
+                                                android:textSize="16sp"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:clickable="true"
+                                                android:background="@drawable/weekday"/>
+                                        </FrameLayout>
+
+                                        <!-- Saturday -->
+                                        <FrameLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+                                            <androidx.appcompat.widget.AppCompatToggleButton
+                                                android:id="@+id/week_saturday"
+                                                android:layout_width="@dimen/recurrence_weekday_size"
+                                                android:layout_height="@dimen/recurrence_weekday_size"
+                                                android:textOn="@string/sat"
+                                                android:textOff="@string/sat"
+                                                android:textSize="16sp"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:clickable="true"
+                                                android:background="@drawable/weekday"/>
+                                        </FrameLayout>
+                                    </LinearLayout>
+
+                                    <!-- View for month -->
+                                    <RadioGroup
+                                        android:id="@+id/custom_repeat_monthly"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingTop="10dp"
+                                        android:paddingBottom="10dp">
+
+                                        <androidx.appcompat.widget.AppCompatRadioButton
+                                            android:id="@+id/repeat_month_same_date"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:paddingTop="7dp"
+                                            android:paddingBottom="7dp"
+                                            android:paddingStart="20dp"
+                                            android:paddingEnd="10dp"
+                                            android:text="On the 17th"
+                                            android:textSize="@dimen/recurrence_picker_text_size"
+                                            android:textColor="@color/radio_button_text_color"
+                                            android:checked="true"/>
+
+                                        <androidx.appcompat.widget.AppCompatRadioButton
+                                            android:id="@+id/repeat_month_same_weekday"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:paddingTop="7dp"
+                                            android:paddingBottom="7dp"
+                                            android:paddingStart="20dp"
+                                            android:paddingEnd="10dp"
+                                            android:text="On the 3rd Tuesday"
+                                            android:textSize="@dimen/recurrence_picker_text_size"
+                                            android:textColor="@color/radio_button_text_color"/>
+                                    </RadioGroup>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </com.android.calendar.expandablelayout.ExpandableLayout>
+
+                    </LinearLayout>
+                </com.android.calendar.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+            <!-- Duration -->
+            <LinearLayout
+                android:id="@+id/recurrence_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/recurrence_background"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_duration"
+                    android:textSize="18sp"
+                    android:textColor="?attr/common_text_color_tertiary"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/endSpinner"
+                        style="@style/TextAppearance.RecurrencePickerStyle"
+
+                        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                        android:spinnerMode="dropdown"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="-10dp"
+                        android:layout_marginEnd="8dp"
+                        android:entries="@array/recurrence_freq"
+                        android:gravity="start|center_vertical"
+                        android:padding="0dp" />
+
+                    <EditText
+                        android:id="@+id/endCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="-3dp"
+                        android:ems="3"
+                        android:gravity="center_horizontal"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:selectAllOnFocus="true"
+                        android:textSize="@dimen/recurrence_picker_text_size"
+                        android:singleLine="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/postEndCount"
+                        style="@style/TextAppearance.RecurrencePickerStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="bottom"
+                        android:singleLine="true"
+                        android:layout_marginBottom="-3dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/endDate"
+                        style="@style/TextAppearance.EditEvent_SpinnerButton"
+                        android:textSize="@dimen/recurrence_picker_text_size"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:singleLine="true"
+                        android:minWidth="80dp"
+                        android:contentDescription="@string/acessibility_recurrence_choose_end_date_description"
+                        android:gravity="center_horizontal|bottom"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="0dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Recurrent result description -->
+            <TextView
+                android:id="@+id/recurrence_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="This event will repeat every day"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="?attr/common_text_color_tertiary"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

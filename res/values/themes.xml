@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="CalendarAppThemeDark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="android:textColorPrimary">@color/fg_dark_primary</item>
+        <item name="android:textColor">@color/fg_dark_primary</item>
+        <item name="android:textColorSecondary">@color/fg_dark_secondary</item>
+        <item name="editEvent_small_color">@color/edit_event_small_dark</item>
+        <item name="android:itemBackground">@color/bg_dark</item>
+
+        <item name="min_year">1800</item>
+        <item name="max_year">2300</item>
+    </style>
+
+    <style name="CalendarAppThemeDay" parent="CalendarAppTheme">
+        <item name="colorPrimary">@android:color/black</item>
+        <item name="colorControlActivated">@android:color/black</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="common_background_color">@android:color/white</item>
+        <item name="common_light_background_color">#121212</item>
+        <item name="common_button_background_color">#232323</item>
+        <item name="common_text_color_dark">#000000</item>
+        <item name="common_text_color_light">#121212</item>
+        <item name="common_text_color_main">@android:color/black</item>
+        <item name="common_text_color_secondary">#232323</item>
+        <item name="common_text_color_tertiary">#343434</item>
+        <item name="common_text_color_quaternary">#565656</item>
+        <item name="preference_title_color">#121212</item>
+        <item name="preference_summary_color">#343434</item>
+        <item name="bottom_bar_drawable">@drawable/bottom_action_bar</item>
+        <item name="bottom_bar_item_focused_color">#0269a4</item>
+        <item name="bottom_bar_item_unfocused_color">#aa000000</item>
+        <item name="current_day_text_color">#ffffff</item>
+        <item name="selected_day_outline_color">@color/common_selected_color</item>
+        <item name="current_month_text_color">#333333</item>
+        <item name="other_month_text_color">#a3a3a3</item>
+        <item name="weekend_text_color">#E3f5174f</item>
+    </style>
+
+    <style name="CalendarAppThemeNight" parent="CalendarAppThemeDark">
+        <item name="colorControlActivated">@color/radio_button_selected_color</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="common_background_color">@android:color/black</item>
+        <item name="common_light_background_color">#1a1a1a</item>
+        <item name="common_button_background_color">#232323</item>
+        <item name="common_text_color_dark">#ffffff</item>
+        <item name="common_text_color_light">#e5e5e5</item>
+        <item name="common_text_color_main">#c3c3c3</item>
+        <item name="common_text_color_secondary">#9a9a9a</item>
+        <item name="common_text_color_tertiary">#6a6a6a</item>
+        <item name="common_text_color_quaternary">#454545</item>
+        <item name="preference_title_color">#8a8a8a</item>
+        <item name="preference_summary_color">#5a5a5a</item>
+        <item name="bottom_bar_drawable">@drawable/bottom_action_bar_night</item>
+        <item name="bottom_bar_item_focused_color">#0a84ff</item>
+        <item name="bottom_bar_item_unfocused_color">#ddffffff</item>
+        <item name="current_day_text_color">#ffffff</item>
+        <item name="selected_day_outline_color">@color/common_selected_color</item>
+        <item name="current_month_text_color">#c3c3c3</item>
+        <item name="other_month_text_color">#5a5a5a</item>
+        <item name="weekend_text_color">#990000</item>
+    </style>
+
+</resources>

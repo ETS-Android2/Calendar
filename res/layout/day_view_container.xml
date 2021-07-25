@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.calendar.kr.day.DayViewContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:clipChildren="false">
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/day_events_view"
+             android:layout_marginTop="10dp"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/no_event_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/common_text_color_secondary"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:gravity="center_vertical"
+        android:text="@string/no_event_label"/>
+</com.android.calendar.kr.day.DayViewContainer>

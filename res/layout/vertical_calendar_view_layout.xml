@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/vertical_calendar_background"
+    tools:ignore="RtlHardcoded,HardcodedText,RtlSymmetry,SmallSp">
+
+    <!-- Day view -->
+    <com.android.calendar.kr.vertical.VerticalDayViewScrollableHost
+        android:id="@+id/day_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:elevation="10dp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/day_view_pager"
+            android:layout_marginTop="@dimen/action_bar_height"
+            android:layout_marginBottom="@dimen/bottom_bar_height"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:orientation="vertical"/>
+    </com.android.calendar.kr.vertical.VerticalDayViewScrollableHost>
+
+    <!-- Month view -->
+    <com.android.calendar.customize.NestedScrollableHost
+        android:id="@+id/month_view_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:background="?attr/common_background_color"
+        android:elevation="20dp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/month_view_pager"
+            android:layout_marginTop="@dimen/action_bar_height"
+            android:layout_marginBottom="@dimen/bottom_bar_height"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:orientation="vertical"/>
+    </com.android.calendar.customize.NestedScrollableHost>
+
+</RelativeLayout>

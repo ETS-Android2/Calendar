@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.calendar.event.custom.CustomTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/simple_event_type_width"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:textAlignment="center"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:drawablePadding="10dp"
+    android:textColor="?attr/common_text_color_main"
+    android:textSize="@dimen/event_type_label_text_size"/>

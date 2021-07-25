@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 양식 4 -->
+<com.android.calendar.kr.vertical.MonthFragmentVerticalContainerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.android.calendar.kr.vertical.VerticalCalendarView
+        android:id="@+id/calendar_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:min_year="?attr/min_year"
+        app:max_year="?attr/max_year"
+        app:month_item_width="70dp"
+        app:text_size="20sp"
+        app:week_bar_color="?attr/common_text_color_main"
+        app:other_month_color="?attr/other_month_text_color"
+        app:current_month_color="?attr/current_month_text_color"
+        app:week_bar_weekend_color="@color/week_bar_weekend_text_color"
+        app:month_weekend_color="?attr/weekend_text_color"
+        app:today_underline_color="@color/todayFillColor"
+        app:today_underline_height="3dp"
+        app:selected_day_circle_color="#23ffffff"
+        app:day_view_main_bg_color="#0076DD"
+        app:day_view_event_bg_color="#9a121212" />
+
+</com.android.calendar.kr.vertical.MonthFragmentVerticalContainerView>

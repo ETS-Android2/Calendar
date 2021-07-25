@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ringtone_picker_default_title">알림음을 선택하십시오</string>
+    <string name="title_default_list_item">기본알림소리</string>
+    <string name="title_silent_list_item">무음</string>
+</resources>

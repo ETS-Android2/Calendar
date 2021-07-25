@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 양식 3 -->
+<com.android.calendar.kr.big.MonthFragmentBigContainerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/action_bar_height"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.android.calendar.kr.big.BigCalendarView
+        android:id="@+id/calendar_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:min_year="?attr/min_year"
+        app:max_year="?attr/max_year"
+        app:month_proportion="0.6"
+        app:today_fill_color="@color/todayFillColor"
+        app:today_outline_color="#0062B8"
+        app:day_color="?attr/common_text_color_main"
+        app:weekday_color="?attr/common_text_color_secondary"
+        app:event_color="?attr/common_text_color_tertiary"
+        app:day_size="21sp"
+        app:weekday_size="@dimen/big_calendar_weekday_text_size"
+        app:event_size="@dimen/big_calendar_event_text_size"
+        app:event_circle_radius="4dp"
+        app:day_label_color="#0076DD"
+        app:day_label_size="22"/>
+
+</com.android.calendar.kr.big.MonthFragmentBigContainerView>

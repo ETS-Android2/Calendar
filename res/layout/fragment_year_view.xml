@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.calendar.kr.year.YearFragmentContainerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/year_fragment_top_margin"
+    android:layout_marginBottom="@dimen/bottom_bar_height"
+    tools:context="com.android.calendar.kr.year.YearViewFragment">
+
+        <com.android.calendar.customize.NestedScrollableHost
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/yearViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:clipToPadding="false">
+                </androidx.viewpager2.widget.ViewPager2>
+        </com.android.calendar.customize.NestedScrollableHost>
+
+</com.android.calendar.kr.year.YearFragmentContainerView>

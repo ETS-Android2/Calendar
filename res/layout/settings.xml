@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/common_background_color"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    tools:context="com.android.calendar.settings.SettingsActivity">
+
+    <!-- Top view -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_left_arrow"
+            android:foreground="@drawable/circle_ripple"
+            android:clickable="true"
+            app:tint="#d3d3d3" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/edit_event_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="?attr/common_text_color_main"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:text="@string/notification_settings_string" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/body_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

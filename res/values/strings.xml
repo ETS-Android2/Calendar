@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- This is the app label used for alert notifications -->
+    <string name="standalone_app_label">Calendar</string>
+
+    <!-- Shared Labels. These labels are shared among the activities. -->
+    <skip />
+    <string name="sun">S</string>
+    <string name="mon">M</string>
+    <string name="tue">T</string>
+    <string name="wed">W</string>
+    <string name="thu">T</string>
+    <string name="fri">F</string>
+    <string name="sat">S</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="lunar_label">Lunar</string>
+    <string name="solar_label">Solar</string>
+    <string name="lunar_calc_label">Lunar</string>
+    <string name="january_label">January</string>
+    <string name="february_label">February</string>
+    <string name="march_label">March</string>
+    <string name="april_label">April</string>
+    <string name="may_label">May</string>
+    <string name="june_label">June</string>
+    <string name="july_label">July</string>
+    <string name="august_label">August</string>
+    <string name="september_label">September</string>
+    <string name="october_label">October</string>
+    <string name="november_label">November</string>
+    <string name="december_label">December</string>
+    <string name="all_day_label">All day</string>
+    <string name="no_event_label">No event</string>
+    <string name="am_label">"<xliff:g id="hour_minute">%1$s</xliff:g> AM"</string>
+    <string name="pm_label">"<xliff:g id="hour_minute">%1$s</xliff:g> PM"</string>
+    <!-- Text to show when an event starts on the current day -->
+    <string name="today">Today</string>
+    <!-- Text to show when an event starts on the next day -->
+    <string name="tomorrow">Tomorrow</string>
+    <!-- Format string for a date and time description.  For ex:
+         "April 19, 2012, 3:00pm - 4:00pm" [CHAR LIMIT=NONE] -->
+    <string name="account_label">Account</string>
+    <!-- Some events repeat daily, weekly, monthly, or yearly.  This is the label
+         for all the choices about how often an event repeats (including the choice
+         of not repeating). -->
+    <string name="repeats_label">Repeat</string>
+    <!-- Title of event when no explicit title is specified by the user -->
+    <string name="no_title_label">(No title)</string>
+
+    <!-- Reminder format strings -->
+    <plurals name="Nminutes">
+        <!-- This is the label for a 1-minute reminder. -->
+        <item quantity="one">1 minute</item>
+        <!-- This is the label for 2 or more minutes. The actual number of
+             minutes is a parameter. -->
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> minutes</item>
+    </plurals>
+    <!-- We use the abbreviation "mins" instead of "minutes" to keep the string short.
+         This is the number of minutes displayed for a calendar reminder.  For example,
+         a reminder of 10 minutes would be displayed as '10 mins'.  The translation
+         should use the shortest acceptable abbreviation to save space. -->
+    <plurals name="Nmins">
+        <!-- This is the label for a 1-minute reminder. -->
+        <item quantity="one">1 min</item>
+        <!-- This is the label for 2 or more minutes. The actual number of
+             minutes is a parameter. -->
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> mins</item>
+    </plurals>
+    <!-- This is the number of hours displayed for a calendar reminder.  For example,
+         a reminder of 1 hour would be displayed as '1 hour'.  The translation
+         should use the shortest acceptable abbreviation of 'hour' to save space. -->
+    <plurals name="Nhours">
+        <!-- This is the label for a 1-hour reminder. -->
+        <item quantity="one">1 hour</item>
+        <!-- This is the label for a reminder of 2 or more hours. The actual number of
+             hours is a parameter. -->
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> hours</item>
+    </plurals>
+    <!-- This is the number of days displayed for a calendar reminder.  For example,
+         a reminder of 2 days would be displayed as '2 days'.  The translation
+         should use the shortest acceptable abbreviation of 'day' to save space. -->
+    <plurals name="Ndays">
+        <!-- This is the label for a reminder of 1 day. -->
+        <item quantity="one">1 day</item>
+        <!-- This is the label for a reminder of 2 or more days. The actual number of
+             days is a parameter. -->
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> days</item>
+    </plurals>
+    <!-- Menu items: -->
+    <skip />
+    <!-- This is a label on a menu item. Pressing this menu item displays the
+         Day view. -->
+    <string name="day_view">"Day"</string>
+    <!-- This is a label on a menu item. Pressing this menu item displays the
+         Week view. -->
+    <string name="week_view">"Week"</string>
+    <!-- This is a label on a menu item. Pressing this menu item displays the
+         Month view. -->
+    <string name="month_view">"Month"</string>
+    <!-- This is a label on a menu item. Pressing this menu item displays the
+         details of an event. -->
+    <string name="year_view">"Year"</string>
+    <!-- This is a label on a menu item. Pressing this menu item displays the
+         details of an event. -->
+    <string name="event_label">"Event"</string>
+    <string name="event_view">"Event Information"</string>
+    <!-- This is a label on a menu item. Pressing this menu item allows the
+         user to create a new event. -->
+    <string name="event_create">"New event"</string>
+    <!-- This is a label on a menu item in a popup window. Pressing this menu
+         item allows the user to edit or change an existing event. -->
+    <string name="event_edit">"Edit event"</string>
+    <!-- This is a label on a menu item. Pressing this menu
+     item opens new dialog shown the date that the user wants to go. -->
+    <string name="goto_date">"Go to date"</string>
+    <string name="search">"Search"</string>
+    <skip />
+    <skip />
+    <skip />
+
+    <!-- Default value of What field (as a hint to the user) [CHAR LIMIT=15] -->
+    <string name="hint_what">"Title"</string>
+    <!-- Default value of Description field (as a hint to the user) [CHAR LIMIT=15]-->
+    <string name="hint_description">"Description"</string>
+    <!-- Default value of Attendees/Guests field (as a hint to the user) [CHAR LIMIT=10] -->
+
+    <string name="hint_short_when">"When"</string>
+    <string name="hint_short_repeat">"Repeat"</string>
+    <string name="hint_short_reminder">"Reminder"</string>
+    <string name="hint_reminder">"Reminder"</string>
+    <string name="hint_short_description">"Description"</string>
+
+    <!-- Toast message displayed when a new event is created -->
+    <string name="creating_event">"Event saved."</string>
+    <!-- Toast message displayed when an existing event is saved after being modified -->
+    <string name="saving_event">"Event saved."</string>
+    <!-- Toast message displayed when a new event was not saved because it was empty [CHAR LIMIT=30] -->
+    <string name="empty_event">"Empty event not created."</string>
+    <!-- Create event dialog -->
+    <skip />
+    <!-- The alert toast is not actually being displayed for some reason. -->
+    <skip />
+    <!-- the title of the alert/notification activity -->
+    <string name="alert_title">Calendar notifications</string>
+    <!-- Notification window messages: -->
+    <skip />
+
+    <!-- Event info/edit screen labels:-->
+    <skip />
+    <!-- EditEventActivity specific strings: -->
+    <skip />
+    <!-- Events have a start date/time and an end date/time. The display shows
+         the start and end times like 'From start date To end date'. This is the
+         label before the 'end date'. -->
+    <string name="edit_event_to_label">End</string>
+    <!-- Events have a start date/time and an end date/time. The display shows
+         the start and end times like 'From start date To end date'. This is the
+         label before the 'start date'. -->
+    <string name="edit_event_from_label">Start</string>
+    <!-- Check box label that specifies if this is an all-day event -->
+    <string name="edit_event_all_day_label">All day</string>
+    <!-- Label for choosing one of the calendars -->
+    <string name="edit_event_calendar_label">Calendar</string>
+    <!-- Label for the list of reminders for an event [CHAR LIMIT=20] -->
+    <string name="reminders_label">Add reminder</string>
+    <!-- View Event -->
+    <skip />
+    <!-- Label for showing event color picker -->
+    <!-- Toast message displayed when the event id was not found LIMIT=30] -->
+    <string name="event_not_found">"Event not found."</string>
+
+    <!-- Agenda View strings -->
+    <skip />
+    <!-- This is shown while the calendar events are being loading to the screen. -->
+    <string name="loading">Loading\u2026</string>
+    <!-- Search activity strings -->
+    <skip />
+    <!-- Title of the search screen [CHAR LIMIT=30] -->
+
+    <!-- Button labels: -->
+    <skip />
+    <!-- This is the title of a popup window that is displayed when the user
+         edits a repeating event. [CHAR LIMIT=20]-->
+    <string name="edit_event_label">"Details"</string>
+    <!-- This is a menu button for switching into edit mode when viewing an event.
+        [CHAR LIMIT=10] -->
+    <string name="edit_label">"Edit"</string>
+    <!-- The button label for deleting an event -->
+    <string name="delete_label">"Delete"</string>
+    <!-- Button labels on expanded notification reminders: -->
+    <skip />
+    <!-- The button label for dismissing all the current reminder alarms. This
+         causes them to disappear from the notification screen. -->
+    <string name="dismiss_all_label">"Dismiss all"</string>
+    <!-- The button label for making the reminder alarms go away temporarily
+         and re-fire in 5 minutes. [CHAR LIMIT=12]-->
+    <string name="snooze_label">"Snooze"</string>
+    <!-- String for the button that will close the notification -->
+    <string name="close_label">"Close"</string>
+
+    <!-- Repetition dialog options: -->
+    <skip />
+
+    <!-- Labels on recurrence picker dialog -->
+    <string name="label_no_repeat">Don\'t repeat</string>
+    <string name="label_every_day">Every day</string>
+    <string name="label_every_week">Every week</string>
+    <string name="label_every_month">Every month</string>
+    <string name="label_every_year">Every year</string>
+    <string name="label_custom">Customize</string>
+    <string name="label_duration">Duration</string>
+    <string name="label_repeat_on">Repeat on</string>
+
+    <string name="at_least_one_weekday_select">You should select at least one day of week.</string>
+
+    <!-- A label in a multiple-choice list for the specifying that an event does
+         not repeat -->
+    <string name="does_not_repeat">Never</string>
+    <!-- Part of a description of an repeating event. This part states the date when a repeating
+         event ends. The part before the semi-colon describes how it repeats.
+         e.g. Every 2 weeks; until 1/1/2030 [CHAR LIMIT=21] -->
+    <string name="empty_label">Empty</string>
+    <string name="endByDate">until <xliff:g id="date">%s</xliff:g></string>
+    <!-- Part of a description of an repeating event. This part how many times the event repeats.
+         The part before the semi-colon describes how it repeats.
+         e.g. Every 2 weeks; for 15 times [CHAR LIMIT=15] -->
+    <plurals name="endByCount">
+        <item quantity="one">for one time</item>
+        <item quantity="other">for %d times</item>
+    </plurals>
+
+    <!-- A description for an event that repeats daily. For example, Every 2 days [CHAR LIMIT=15]-->
+    <string name="daily_interval_other">every %d days</string>
+
+    <!-- A label in a multiple-choice list for the specifying that an event
+         repeats every weekday (Monday through Friday) -->
+    <string name="every_weekday">"all days of the week"</string>
+    <string name="weekly_interval_one">every week %s</string>
+    <string name="weekly_interval_other">every %1$d weeks %2$s</string>
+
+    <!-- A description for an event that repeats monthly -->
+    <string name="monthly_interval_other">every %1$d months</string>
+
+    <!-- A description for an event that repeats yearly -->
+    <string name="yearly_interval_other">every %1$d years</string>
+
+    <!-- Combination of day recurrence event description -->
+    <string name="every_day_combination">every day</string>
+    <string name="other_day_combination">every %d days</string>
+
+    <!-- Combination of week recurrence event description -->
+    <string name="every_week_combination">every week on %s</string>
+    <string name="other_week_combination">every %1$d weeks on %2$s</string>
+
+    <!-- Combination of month recurrence event description -->
+    <string name="every_month_combination_monthday">%s of every month</string>
+    <string name="other_month_combination_monthday">every %1$d months %2$s of the month</string>
+    <string name="every_month_combination_weekday">every month %s</string>
+    <string name="other_month_combination_weekday">every %1$d months %2$s of the month</string>
+
+    <!-- Combination of year recurrence event description -->
+    <string name="every_year_combination">every year on %s</string>
+    <string name="other_year_combination">every %1$d years on %2$s</string>
+
+    <string name="recurrence_full_string_format">This event will repeat %s.</string>
+
+    <!-- This is a label for telling the user that this event repeats in
+         custom (non-standard) way from the usual repeat rates (such as daily,
+         weekly, etc.) and that the user cannot change this on the phone
+         (but only on the web). -->
+
+    <!-- This is a choice in a list that the user sees when he tries to modify
+         a repeating event.  This choice says to change just this one instance
+         of this repeating event. -->
+    <string name="modify_event">Change only this event</string>
+    <!-- This is a choice in a list that the user sees when he tries to modify
+         a repeating event.  This choice says to change all occurrences of
+         this repeating event. -->
+    <string name="modify_all">Change all events in the series</string>
+    <!-- This is a choice in a list that the user sees when he tries to modify
+         a repeating event.  This choice says to change this instance and all
+         future occurrences of this repeating event. -->
+    <string name="modify_all_following">Change this and all future events</string>
+
+    <!-- Dialogs -->
+
+    <!-- This is a label on the dialog for creating a new event. [CHAR LIMIT=30] -->
+    <string name="new_event_dialog_label">"New event"</string>
+    <!-- This is the button to create a new event in a dialog window. [CHAR LIMIT=30] -->
+    <!-- Confirmation dialog message -->
+    <skip />
+    <!-- This is a confirmation message in a popup dialog that appears when the
+         user has asked to delete an event. The user still has a chance to cancel
+         this operation. -->
+    <string name="delete_this_event_title">Delete this event?</string>
+    <string name="apply_these_changes">Apply these changes?</string>
+
+    <!-- Three strings to delete recurrence events -->
+    <string name="delete_only_this_event">Only this event</string>
+    <string name="delete_following_events">This and future events</string>
+    <string name="delete_all_events">All events</string>
+
+    <!-- This is the title of the screen for setting user preferences. -->
+    <string name="preferences_title">"Settings"</string>
+    <!-- This is the title of a section in the Settings screen for settings
+         related to viewing calendar events -->
+    <string name="preferences_general_title">Calendar view setting</string>
+    <!-- This is the title of a section in the Settings screen for settings
+         related to reminders for calendar events -->
+    <string name="preferences_reminder_title">Notifications \u0026 reminders</string>
+    <!-- DO NOT TRANSLATE -->
+    <!-- Title of the default event duration setting-->
+    <string name="preferences_default_event_duration_title">Default event duration</string>
+    <!-- Message to show in a toast when the history is cleared [CHAR LIMIT=40] -->
+    <!-- Settings check box label to enable or disable notifications -->
+    <string name="preferences_alerts_title">Notifications</string>
+    <!-- Settings dialog label that specifies when the phone should vibrate -->
+    <string name="preferences_alerts_vibrateWhen_title">Vibrate</string>
+    <!-- Title of ringtone selector dialog -->
+    <string name="preferences_alerts_ringtone_title">Notification Sound</string>
+    <!-- Title of check box label to enable or disable pop-up notifications -->
+    <string name="preferences_alerts_popup_title">Pop-up notification</string>
+    <!-- List item label for setting the default number of reminder minutes -->
+    <string name="preferences_default_reminder_title">Default reminder time</string>
+    <!-- Title of dialog for setting the default number of reminder minutes -->
+    <string name="preferences_default_reminder_dialog">Default reminder time</string>
+    <!-- Default value for the number of reminder minutes -->
+    <string name="preferences_default_reminder_default" translatable="false">10</string>
+
+    <!-- Check box label for using custom snooze delays -->
+    <string name="preferences_alerts_custom_snooze_delay_title">Ask for reminder snooze delay</string>
+    <!-- Summaries for using custom snooze delays -->
+    <string name="preferences_alerts_custom_snooze_delay_summary_on">Ask whenever snoozing reminders</string>
+    <string name="preferences_alerts_custom_snooze_delay_summary_off">Always use default snooze delay</string>
+    <!-- Title of custom snooze delay dialog -->
+    <string name="snooze_delay_dialog_title">Set snooze delay</string>
+    <!-- List item label for setting the default snooze delay -->
+    <string name="preferences_default_snooze_delay_title">Default snooze delay time</string>
+    <!-- Title of dialog for setting the default snooze delay -->
+    <string name="preferences_default_snooze_delay_dialog">Default snooze delay</string>
+    <!-- Default value for the default snooze delay (in minutes) -->
+    <string name="preferences_default_snooze_delay_default" translatable="false">5</string>
+
+    <!-- Widget -->
+    <skip />
+
+    <string name="accessibility_pick_recurrence">Repeat event</string>
+    <!-- Add a reminder to an event [CHAR LIMIT = NONE]-->
+    <string name="accessibility_add_reminder">Add reminder</string>
+    <!-- Remove a reminder from an event [CHAR LIMIT = NONE]-->
+    <string name="accessibility_remove_reminder">Remove reminder</string>
+
+    <!-- Set the time for the reminder[CHAR LIMIT = NONE]-->
+    <string name="accessibility_reminder_time">Reminder time</string>
+    <!-- Set the type of the reminder (popup/email/sms)[CHAR LIMIT = NONE]-->
+    <string name="accessibility_reminder_type">Reminder type</string>
+
+    <!-- number of events in the notification bar -->
+    <plurals name="Nevents">
+        <!-- This is the label for a 1 event. -->
+        <item quantity="one">1 event</item>
+        <!-- This is the label for 2 or more events. -->
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> events</item>
+    </plurals>
+
+    <!-- number of remaining events for an alert digest in the notification bar [CHAR LIMIT = 30] -->
+    <plurals name="N_remaining_events">
+        <!-- This is the label for 1 event. -->
+        <item quantity="one">+1 event</item>
+        <!-- This is the label for 2 or more events. -->
+        <item quantity="other">+<xliff:g id="count">%d</xliff:g> events</item>
+    </plurals>
+
+    <!-- Repeat an monthly event on the same day of every month [CHAR LIMIT=20] -->
+    <string name="repeat_monthly_on_day1">On the %dst</string>
+    <string name="repeat_monthly_on_day2">On the %dnd</string>
+    <string name="repeat_monthly_on_day3">On the %drd</string>
+    <string name="repeat_monthly_on_day4">On the %dth</string>
+
+    <!-- Specifies that a repeating event to repeat forever (based on the defined frequency) instead of ending at a future date[CHAR LIMIT=20] -->
+    <string name="recurrence_end_continously">Forever</string>
+    <!-- Specifies that a repeating event to repeat until a certain date[CHAR LIMIT=25] -->
+    <string name="recurrence_end_date_label">Until a date</string>
+    <!-- Specifies that a repeating event to repeat until a certain date[CHAR LIMIT=20] -->
+    <string name="recurrence_end_date">Until <xliff:g id="date">%s</xliff:g></string>
+    <!-- Specifies that a repeating event to repeat for a number of times. A repeating event can repeat forever, repeat in a certain frequency until a certain date, or repeat for a number of times. e.g. repeat 10 times and stop. This string is for the last case [CHAR LIMIT=25] -->
+    <string name="recurrence_end_count_label">For a number of events</string>
+
+    <!-- Specifies that a repeating event should repeat for a certain number of iterations. [CHAR LIMIT=20]-->
+    <plurals name="recurrence_end_count">
+        <item quantity="one">For <xliff:g id="event_count">%d</xliff:g> event</item>
+        <item quantity="other">For <xliff:g id="event_count">%d</xliff:g> events</item>
+    </plurals>
+
+    <!-- Description of the selected marker for accessibility support [CHAR LIMIT = NONE]-->
+    <string name="acessibility_recurrence_choose_end_date_description">change end date</string>
+
+    <!-- Do Not Translate.  Sender identity for global notification synchronization. -->
+    <string name="notification_sender_id" translatable="false"></string>
+
+    <string name="user_rejected_calendar_write_permission">This application requires calendar read &amp; write permissions to work properly. Please try again.</string>
+    <string name="user_must_grant_calendar_write_permission">This application requires calendar read &amp; write permissions to work properly.</string>
+    <string name="calendar_permission_not_granted">Sorry this feature can\'t work. This requires calendar read and write permissions to work properly</string>
+
+    <!-- Strings to describe default duration array -->
+    <string name="zero_minutes">0 minutes</string>
+    <string name="fifteen_minutes">15 minutes</string>
+    <string name="thirty_minutes">30 minutes</string>
+    <string name="one_hour">1 hour</string>
+    <string name="one_and_a_half_hours">1.5 hours</string>
+    <string name="two_hours">2 hours</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="label_ok">OK</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_save">Save</string>
+    <string name="agenda_time_start">Start</string>
+    <string name="agenda_time_end">End</string>
+
+    <!-- Strings used on bottom bar of main activity -->
+    <string name="new_event_string">New</string>
+    <string name="event_list_string">Agenda</string>
+    <string name="calculate_date_string">Calculate</string>
+    <string name="settings_string">Settings</string>
+    <string name="notification_settings_string">Notification Settings</string>
+
+    <!-- Display select activity string -->
+    <string name="calendar_type_select_title">Calendar Type</string>
+
+    <!-- Display type 1 - 4 -->
+    <string name="display_type1">Format 1</string>
+    <string name="display_type2">Format 2</string>
+    <string name="display_type3">Format 3</string>
+    <string name="display_type4">Format 4</string>
+    <string name="calendar_type1_set">Format 1 has been set.</string>
+    <string name="calendar_type2_set">Format 2 has been set.</string>
+    <string name="calendar_type3_set">Format 3 has been set.</string>
+    <string name="calendar_type4_set">Format 4 has been set.</string>
+
+    <!-- Date calculate activity string -->
+    <string name="date_calculate_title">Date calculate</string>
+    <string name="day_diff_calculate">Calculate day difference</string>
+    <string name="start_date">Start date</string>
+    <string name="from_date">From</string>
+    <string name="day_count">Day count</string>
+    <string name="forward">Forward</string>
+    <string name="backward">Backward</string>
+    <string name="view_on_calendar">View on calendar</string>
+    <string name="calculate_button_string">Calculate</string>
+    <string name="date_format">%1$d.%2$d.%3$d</string>
+    <string name="lunar_date_format_with_leap">%1$d-%2$d(leap)-%3$d</string>
+
+    <!-- Event Type Strings -->
+    <string name="event_type_default">General</string>
+    <string name="event_type_birthday">Birthday</string>
+    <string name="event_type_conference">Conference</string>
+    <string name="event_type_holiday">Holiday</string>
+    <string name="event_type_competition">Competition</string>
+    <string name="event_type_travel">Travel</string>
+    <string name="event_type_cure">Cure</string>
+    <string name="event_type_examination">Examination</string>
+
+    <!-- Settings preference strings -->
+    <string name="notification_switch_preference_category_title">Notification switch</string>
+    <string name="notification_method_preference_category_title">Notification method</string>
+    <string name="lunar_string_with_leap">Lunar %1$d.%2$d(leap)</string>
+    <string name="lunar_string_without_leap">Lunar %1$d.%2$d</string>
+    <string name="lunar_string_with_leap_none_lunar">%1$d.%2$d(leap)</string>
+    <string name="lunar_string_without_leap_none_lunar">%1$d.%2$d</string>
+
+    <!-- Today text format on year view -->
+    <string name="today_on_year">%1$d %2$s</string>
+
+    <string name="go_to_today">Go to today</string>
+</resources>

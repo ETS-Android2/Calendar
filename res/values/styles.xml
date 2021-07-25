@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/* //device/apps/Calendar/assets/res/any/styles.xml
+**
+** Copyright 2006, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Application theme. -->
+    <style name="CalendarAppTheme" parent="Base.CalendarAppTheme">
+        <item name="alertDialogTheme">@style/DialogTheme</item>
+        <item name="android:editTextColor">@color/commonTextColor</item>
+        <item name="android:itemBackground">@color/menuItemBackgroundColor</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:colorForeground">#585858</item>
+
+        <item name="min_year">1800</item>
+        <item name="max_year">2300</item>
+    </style>
+
+    <style name="Base.CalendarAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="editEvent_small_color">@color/edit_event_small</item>
+        <item name="event_info_organizer_color">@color/event_info_organizer_color</item>
+        <item name="event_info_description_color">@color/event_info_description_color</item>
+        <item name="event_info_body_color">@color/event_info_body_color</item>
+        <item name="event_info_label_color">@color/event_info_label_color</item>
+        <item name="android:itemBackground">@android:color/white</item>
+        <item name="create_event_date_color">@color/create_event_date_color</item>
+        <item name="calendar_owner_text_color">@color/calendar_owner_text_color</item>
+        <item name="autoCompleteTextViewStyle">@style/actionbar_cursor</item>
+    </style>
+
+    <style name="actionbar_cursor" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textCursorDrawable">@drawable/actionbar_cursor</item>
+    </style>
+    <!-- END Application theme -->
+
+    <style name="TextAppearance" parent="android:TextAppearance">
+    </style>
+
+    <style name="weekBarText" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColor">#333333</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.EditEvent_LabelSmall" parent="TextAppearance.EditEvent_Small">
+        <item name="android:minHeight">24dip</item>
+        <item name="android:layout_width">144dip</item>
+        <item name="android:layout_marginLeft">16dip</item>
+        <item name="android:layout_marginRight">16dip</item>
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:paddingRight">8dip</item>
+        <item name="android:layout_marginBottom">-8dip</item>
+    </style>
+
+    <style name="TextAppearance.EditEvent_Small">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/editEvent_small_color</item>
+    </style>
+
+    <style name="TextAppearance.EditEvent">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?attr/editEvent_small_color</item>
+    </style>
+
+    <style name="TextAppearance.EditEvent_Value" parent="TextAppearance.EditEvent">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+
+    <style name="TextAppearance.EditEvent_Spinner" parent="android:style/Widget.Holo.Light.Spinner">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FF333333</item>
+    </style>
+
+    <style name="TextAppearance.EditEvent_SpinnerButton" parent="TextAppearance.EditEvent_Spinner">
+        <item name="android:textColor">#757575</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="backgroundColor">@android:color/transparent</item>
+    </style>
+
+    <style name="NotificationPrimaryText" parent="@android:style/TextAppearance.StatusBar.EventContent.Title">
+    </style>
+
+    <style name="NotificationSecondaryText" parent="@android:style/TextAppearance.Holo">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <!-- Bottom bar button style -->
+    <style name="BottomBarButtonStyle">
+        <item name="android:paddingStart">@dimen/bottom_bar_button_horizontal_padding</item>
+        <item name="android:paddingEnd">@dimen/bottom_bar_button_horizontal_padding</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawableTint">@android:color/white</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:clickable">true</item>
+        <item name="focused_color">?attr/bottom_bar_item_focused_color</item>
+        <item name="unfocused_color">?attr/bottom_bar_item_unfocused_color</item>
+    </style>
+
+    <style name="myDialog">
+    </style>
+
+    <style name="recurrenceDialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="TextAppearance.RecurrencePickerStyle">
+        <item name="android:textSize">@dimen/recurrence_picker_text_size</item>
+        <item name="android:popupElevation">0dp</item>
+        <item name="android:textColor">?attr/common_text_color_main</item>
+    </style>
+
+    <!-- Styles on widget -->
+    <style name="WidgetViewStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:tint">@android:color/white</item>
+    </style>
+    <style name="MonthWidgetDayTextStyle">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+    <style name="MonthWidgetDayEventIconStyle">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">8dp</item>
+        <item name="android:src">@drawable/month_widget_day_event_circle</item>
+    </style>
+
+    <style name="event_edit_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/common_text_color_main</item>
+        <item name="android:textColorHint">?attr/common_text_color_secondary</item>
+        <item name="android:background">@drawable/round_background</item>
+    </style>
+    <style name="DialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

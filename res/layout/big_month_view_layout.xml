@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.calendar.kr.big.BigMonthViewContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/big_month_container_padding_start"
+    android:paddingEnd="@dimen/big_month_container_padding_end">
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/one_month_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:orientation="vertical"/>
+</com.android.calendar.kr.big.BigMonthViewContainer>

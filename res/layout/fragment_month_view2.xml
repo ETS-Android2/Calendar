@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 양식 2 -->
+<com.android.calendar.kr.general.MonthFragmentGeneralContainerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/action_bar_height"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:ignore="RtlHardcoded,HardcodedText,RtlSymmetry,SmallSp">
+
+    <com.android.calendar.kr.general.GeneralCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:min_year="?attr/min_year"
+        app:max_year="?attr/max_year"
+        app:calendar_padding="10dp"
+        app:other_month_text_color="#e1e1e1"
+        app:selected_text_color="#fff"
+        app:today_fill_color="@color/todayFillColor"
+        app:week_text_color="#716B6B"
+        app:calendar_height="70dp"
+        app:month_proportion="0.6"
+        >
+        <com.android.calendar.customize.NestedScrollableHost
+            android:id="@+id/month_view_pager_container"
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/month_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.android.calendar.customize.NestedScrollableHost>
+        <com.android.calendar.customize.NestedScrollableHost
+            android:id="@+id/day_view_pager_container"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/day_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.android.calendar.customize.NestedScrollableHost>
+    </com.android.calendar.kr.general.GeneralCalendarView>
+
+</com.android.calendar.kr.general.MonthFragmentGeneralContainerView>

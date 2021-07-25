@@ -1,0 +1,800 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/month_view_widget_background"
+    android:padding="@dimen/widget_margin"
+    android:orientation="vertical"
+    android:theme="@style/WidgetViewStyle">
+
+    <!-- 이전, 다음 단추, 월.날자 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:id="@+id/go_prev"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:src="@drawable/ic_left_arrow"
+            android:background="?android:attr/selectableItemBackgroundBorderless"/>
+        <TextView
+            android:id="@+id/widget_current_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:text="2020.09"
+            />
+        <ImageView
+            android:id="@+id/go_next"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:src="@drawable/ic_right_arrow"
+            android:background="?android:attr/selectableItemBackgroundBorderless"/>
+    </LinearLayout>
+
+    <!-- 요일, 날자들 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- 요일 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sun"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/weekend_text_color"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mon"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tue"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wed"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thu"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fri"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sun"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 날자들 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
+                <TextView
+                    android:id="@+id/day_01"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="30"
+                    android:textColor="@color/weekend_text_color"/>
+                <ImageView
+                    android:id="@+id/event_01"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_02"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="31" />
+                <ImageView
+                    android:id="@+id/event_02"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_03"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="1" />
+                <ImageView
+                    android:id="@+id/event_03"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_04"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="2" />
+                <ImageView
+                    android:id="@+id/event_04"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_05"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="3" />
+                <ImageView
+                    android:id="@+id/event_05"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_06"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="4" />
+                <ImageView
+                    android:id="@+id/event_06"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_07"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="5" />
+                <ImageView
+                    android:id="@+id/event_07"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
+                <TextView
+                    android:id="@+id/day_08"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="6"
+                    android:textColor="@color/weekend_text_color"/>
+                <ImageView
+                    android:id="@+id/event_08"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_09"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="7" />
+                <ImageView
+                    android:id="@+id/event_09"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_10"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="8" />
+                <ImageView
+                    android:id="@+id/event_10"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_11"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="9" />
+                <ImageView
+                    android:id="@+id/event_11"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_12"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="10" />
+                <ImageView
+                    android:id="@+id/event_12"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_13"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="11" />
+                <ImageView
+                    android:id="@+id/event_13"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_14"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="12" />
+                <ImageView
+                    android:id="@+id/event_14"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
+                <TextView
+                    android:id="@+id/day_15"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="13"
+                    android:textColor="@color/weekend_text_color" />
+                <ImageView
+                    android:id="@+id/event_15"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_16"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="14" />
+                <ImageView
+                    android:id="@+id/event_16"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_17"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="15" />
+                <ImageView
+                    android:id="@+id/event_17"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_18"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="16" />
+                <ImageView
+                    android:id="@+id/event_18"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_19"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="17" />
+                <ImageView
+                    android:id="@+id/event_19"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_20"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="18" />
+                <ImageView
+                    android:id="@+id/event_20"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_21"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="19" />
+                <ImageView
+                    android:id="@+id/event_21"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
+                <TextView
+                    android:id="@+id/day_22"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="20"
+                    android:textColor="@color/weekend_text_color" />
+                <ImageView
+                    android:id="@+id/event_22"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_23"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="21"/>
+                <ImageView
+                    android:id="@+id/event_23"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_24"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="22" />
+                <ImageView
+                    android:id="@+id/event_24"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_25"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="23" />
+                <ImageView
+                    android:id="@+id/event_25"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_26"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="24" />
+                <ImageView
+                    android:id="@+id/event_26"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_27"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="25" />
+                <ImageView
+                    android:id="@+id/event_27"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_28"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="26" />
+                <ImageView
+                    android:id="@+id/event_28"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
+                <TextView
+                    android:id="@+id/day_29"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="27"
+                    android:textColor="@color/weekend_text_color" />
+                <ImageView
+                    android:id="@+id/event_29"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_30"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="28" />
+                <ImageView
+                    android:id="@+id/event_30"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_31"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="29" />
+                <ImageView
+                    android:id="@+id/event_31"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_32"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="30" />
+                <ImageView
+                    android:id="@+id/event_32"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_33"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="1" />
+                <ImageView
+                    android:id="@+id/event_33"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_34"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="2" />
+                <ImageView
+                    android:id="@+id/event_34"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_35"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="3" />
+                <ImageView
+                    android:id="@+id/event_35"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
+                <TextView
+                    android:id="@+id/day_36"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="4"
+                    android:textColor="@color/weekend_text_color" />
+                <ImageView
+                    android:id="@+id/event_36"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_37"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="5" />
+                <ImageView
+                    android:id="@+id/event_37"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_38"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="6" />
+                <ImageView
+                    android:id="@+id/event_38"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_39"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="7" />
+                <ImageView
+                    android:id="@+id/event_39"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_40"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="8" />
+                <ImageView
+                    android:id="@+id/event_40"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_41"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="9" />
+                <ImageView
+                    android:id="@+id/event_41"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day_42"
+                    style="@style/MonthWidgetDayTextStyle"
+                    android:text="10" />
+                <ImageView
+                    android:id="@+id/event_42"
+                    style="@style/MonthWidgetDayEventIconStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

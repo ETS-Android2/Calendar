@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.calendar.kr.vertical.VerticalDayViewContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/vertical_calendar_padding_top"
+    android:paddingStart="@dimen/vertical_calendar_padding_start"
+    android:paddingEnd="@dimen/vertical_calendar_padding_end"
+    android:orientation="vertical">
+
+    <!-- Day, lunar day, week day -->
+    <LinearLayout
+        android:id="@+id/day_label_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/vertical_day_view_label_height"
+        android:background="@drawable/round_event_background">
+        <!-- Day, week day -->
+        <LinearLayout
+            android:layout_width="@dimen/vertical_week_day_view_width"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/day_number"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="?attr/common_text_color_light"
+                android:textSize="19sp"
+                android:text="3"
+                tools:ignore="NestedWeights" />
+            <TextView
+                android:id="@+id/week_day"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:textColor="?attr/common_text_color_main"
+                android:textSize="16sp"
+                android:text="토요일"/>
+        </LinearLayout>
+
+        <!-- Lunar day -->
+        <LinearLayout
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="?attr/common_text_color_main"
+                android:textSize="16sp"
+                android:text="@string/lunar_label"
+                tools:ignore="NestedWeights" />
+            <TextView
+                android:id="@+id/lunar_day"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:textColor="?attr/common_text_color_main"
+                android:text="8월 17일"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Event list -->
+    <com.android.calendar.kr.vertical.CustomRecyclerView
+        android:id="@+id/event_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"/>
+
+</com.android.calendar.kr.vertical.VerticalDayViewContainer>

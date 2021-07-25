@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:color="@color/radio_button_selected_color"/>
+    <item android:state_checked="true" android:color="@color/radio_button_selected_color"/>
+    <item android:color="?attr/common_text_color_main"/>
+</selector>

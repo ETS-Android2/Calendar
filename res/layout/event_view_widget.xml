@@ -1,0 +1,80 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:theme="@style/WidgetViewStyle">
+
+    <TextView
+        android:id="@+id/event_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:textSize="18sp"
+        android:text="2020.5.24 일요일"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/event_widget_background">
+
+        <ImageView
+            android:id="@+id/event_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_default_icon" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+            <TextView
+                android:id="@+id/no_upcoming_events"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_event_label"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/result_events"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:clickable="true">
+                <TextView
+                    android:id="@+id/event_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:text="일룡생일"/>
+                <TextView
+                    android:id="@+id/event_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:text="2020.5.24 00:00 - 00:01"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/create_event"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_event_plus"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"/>
+
+    </LinearLayout>
+
+</LinearLayout>

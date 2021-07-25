@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_week"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/week_bar_height"
+    android:minHeight="@dimen/week_bar_height"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:textColor="@color/week_bar_weekend_text_color"
+        style="@style/weekBarText"
+        android:text="@string/sun"/>
+
+    <TextView
+        style="@style/weekBarText"
+        android:text="@string/mon" />
+
+    <TextView
+        style="@style/weekBarText"
+        android:text="@string/tue" />
+
+    <TextView
+        style="@style/weekBarText"
+        android:text="@string/wed" />
+
+    <TextView
+        style="@style/weekBarText"
+        android:text="@string/thu" />
+
+    <TextView
+        style="@style/weekBarText"
+        android:text="@string/fri" />
+
+    <TextView
+        style="@style/weekBarText"
+        android:text="@string/sat" />
+</LinearLayout>

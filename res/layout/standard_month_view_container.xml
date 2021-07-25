@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.calendar.kr.standard.StandardMonthViewContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.android.calendar.kr.standard.MaskImageView
+        android:id="@+id/bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_may"
+        android:contentDescription="TODO" />
+    <com.android.calendar.kr.common.CustomMonthView
+        android:id="@+id/month_view"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+</com.android.calendar.kr.standard.StandardMonthViewContainer>

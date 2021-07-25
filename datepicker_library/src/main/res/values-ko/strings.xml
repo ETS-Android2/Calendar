@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lany_am_label">오전</string>
+    <string name="lany_pm_label">오후</string>
+</resources>

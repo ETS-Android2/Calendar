@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.calendar.agenda.AgendaItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="25dp"
+    android:paddingEnd="10dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+    <ImageView
+        android:id="@+id/event_image"
+        android:layout_width="@dimen/event_item_image_size"
+        android:layout_height="@dimen/event_item_image_size"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_default_icon"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:id="@+id/event_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:textSize="19sp"
+        android:textColor="?attr/common_text_color_main"
+        android:text="일룡생일" />
+
+    <TextView
+        android:id="@+id/event_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:textSize="17sp"
+        android:textColor="?attr/common_text_color_secondary"
+        android:text="2020.05.08 금요일" />
+
+</com.android.calendar.agenda.AgendaItemView>
